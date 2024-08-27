@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CutomTextFormField extends StatelessWidget {
-  CutomTextFormField(
+  const CutomTextFormField(
       {super.key,
       required this.hintText,
       this.maxLines = 1,
@@ -9,8 +9,8 @@ class CutomTextFormField extends StatelessWidget {
       this.onChanged});
   final String hintText;
   final int maxLines;
-  Function(String)? onChanged;
-  TextEditingController? controller;
+  final Function(String)? onChanged;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
