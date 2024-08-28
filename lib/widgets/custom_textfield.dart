@@ -35,7 +35,7 @@ class CutomTextFormField extends StatelessWidget {
               borderSide: const BorderSide(color: Colors.purple, width: 2)),
           hintText: hintText,
           hintStyle:
-              TextStyle(color: Colors.grey[600], fontFamily: 'Montserrat'),
+              const TextStyle(color: Colors.purple, fontFamily: 'Montserrat'),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 20, horizontal: 16)),
     );
