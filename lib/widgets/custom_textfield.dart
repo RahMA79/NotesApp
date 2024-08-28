@@ -6,19 +6,26 @@ class CutomTextFormField extends StatelessWidget {
       required this.hintText,
       this.maxLines = 1,
       this.controller,
-      this.onChanged});
+      this.onSaved});
   final String hintText;
   final int maxLines;
-  final Function(String)? onChanged;
+  final void Function(String?)? onSaved;
   final TextEditingController? controller;
-
+  final nullVariable = null;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       cursorColor: Colors.purple,
       maxLines: maxLines,
       controller: controller,
-      onChanged: onChanged,
+      onSaved: onSaved,
+      validator: (value) {
+        if (value?.isEmpty ?? nullVariable) {
+          return 'Field is required';
+        } else {
+          return null;
+        }
+      },
       decoration: InputDecoration(
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
