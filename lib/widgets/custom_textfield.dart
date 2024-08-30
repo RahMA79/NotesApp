@@ -18,7 +18,7 @@ class CutomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      cursorColor: Colors.purple,
+      cursorColor: const Color(0xff0077b6),
       maxLines: maxLines,
       controller: controller,
       onSaved: onSaved,
@@ -43,10 +43,10 @@ class CutomTextFormField extends StatelessWidget {
               )),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: const BorderSide(color: Colors.purple, width: 2)),
+              borderSide: const BorderSide(color: Color(0xff0077b6), width: 2)),
           hintText: hintText,
-          hintStyle:
-              const TextStyle(color: Colors.purple, fontFamily: 'Montserrat'),
+          hintStyle: const TextStyle(
+              color: Color(0xff0077b6), fontFamily: 'Montserrat'),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 20, horizontal: 16)),
     );
