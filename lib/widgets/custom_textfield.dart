@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CutomTextFormField extends StatelessWidget {
-  const CutomTextFormField(
-      {super.key,
-      required this.hintText,
-      this.maxLines = 1,
-      this.controller,
-      this.onSaved});
+  const CutomTextFormField({
+    super.key,
+    required this.hintText,
+    this.maxLines = 1,
+    this.controller,
+    this.onSaved,
+    this.onChanged,
+  });
   final String hintText;
   final int maxLines;
   final void Function(String?)? onSaved;
+  final void Function(String)? onChanged;
   final TextEditingController? controller;
   final nullVariable = null;
   @override
@@ -19,6 +22,7 @@ class CutomTextFormField extends StatelessWidget {
       maxLines: maxLines,
       controller: controller,
       onSaved: onSaved,
+      onChanged: onChanged,
       validator: (value) {
         if (value?.isEmpty ?? nullVariable) {
           return 'Field is required';
