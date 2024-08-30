@@ -13,6 +13,7 @@ class NotesView extends StatelessWidget {
         backgroundColor: Colors.purple,
         onPressed: () {
           showModalBottomSheet(
+              isScrollControlled: true,
               context: context,
               builder: (context) {
                 return const CutomBottomSheet();
