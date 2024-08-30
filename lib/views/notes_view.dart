@@ -19,7 +19,7 @@ class NotesView extends StatelessWidget {
                     isScrollControlled: true,
                     context: context,
                     builder: (context) {
-                      return CutomBottomSheet();
+                      return const CutomBottomSheet();
                     });
               },
               child: const Icon(
